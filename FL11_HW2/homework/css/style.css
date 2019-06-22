@@ -1,5 +1,27 @@
-/*
+@media print {
+    body {
+        background-color: #ffffff;
+    }
 
-write your code here
+    .tm-main-content {
+        padding-top: 0;
+        margin: 40px 50px;
+    }
 
-*/
+    nav,
+    .tm-team-img,
+    .gallery-container,
+    .img-contact-us,
+    .carousel-indicators,
+    #contact {
+        display: none;
+    }
+
+    .padding-medium h2 {
+        margin-bottom: 0;
+        color: dodgerblue;
+        text-transform: uppercase;
+    }
+
+
+}
