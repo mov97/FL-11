@@ -1,11 +1,6 @@
 @media print {
     body {
-        background-color: #ffffff;
-    }
-
-    .tm-main-content {
-        padding-top: 0;
-        margin: 40px 50px;
+        background-color: #fff;
     }
 
     nav,
@@ -17,11 +12,57 @@
         display: none;
     }
 
+    section {
+        text-align: center;
+    }
+
+    .tm-main-content {
+        padding: 0;
+        margin: 0;
+    }
+
     .padding-medium h2 {
-        margin-bottom: 0;
-        color: dodgerblue;
+        color: lightskyblue;
         text-transform: uppercase;
     }
 
+    ol {
+        width: 400px;
+        padding-left: 15px;
+        list-style-type: none;
+        margin: auto;
+    }
 
+    ol>li:nth-child(odd) {
+        text-align: left;
+    }
+
+    ol>li:nth-child(even) {
+        text-align: right;
+    }
+
+    ol>li>a {
+        color: grey;
+        text-transform: capitalize;
+    }
+
+    ol>li::first-letter {
+        color: lightskyblue;
+        font-size: 1.5em;
+    }
+
+    .heading,
+    .tm-team-description-container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .padding-medium,
+    .carousel {
+        padding: 0;
+    }
+
+    .tm-content-box {
+        margin-bottom: 0;
+    }
 }
