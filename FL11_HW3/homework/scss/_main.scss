@@ -1,6 +1,6 @@
 @mixin Banner-text-color-and-font-family {
   color: $HeaderPColor;
-  font-family: $HeaderPColor;
+  font-family: $TextFontFamily;
 }
 
 @mixin bordered($PageThemeColor: green) {
