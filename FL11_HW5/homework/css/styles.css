@@ -1,18 +1,11 @@
-/*
- * Feel free to change name of colors if you need it
- * Feel free to add new colors if you need it
- */
-:root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #162b4d;
-  --link: #fff;
-  --link--hover: #b8b8b8;
-  --bg-footer-color: #162b4d;;
-}
+/*:root {*/
+/*  --bg-color--dark: #0b192f;*/
+/*  --bg-color--header: #162b4d;*/
+/*  --link: #fff;*/
+/*  --link--hover: #b8b8b8;*/
+/*  --bg-footer-color: #162b4d;;*/
+/*}*/
 
-body {
-  font-family: roboto;
-}
 .post-1 {
 	background: #B71757;
 }
@@ -29,4 +22,347 @@ body {
 	background: #2d95bb;
 }
 
-/* Your styles go here */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1400px;
+    color: #fff;
+    background-color: #0b192f;
+    font-family: Roboto, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5em;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 0.75px;
+}
+
+header {
+    max-width: 100%;
+    height: 70px;
+    background-color: #162b4d;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+}
+
+nav {
+    margin-right: 1.5em;
+}
+
+nav ul li {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    margin-right: 1.5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 0.5em;
+    text-decoration: none;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+nav ul li:hover {
+    background: #b8b8b83a;
+}
+
+.logo span {
+    color: crimson;
+}
+
+main {
+    margin: 3em 0 3em 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    width: 73%;
+}
+
+.post {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.content-img,
+.blog-text {
+    flex: 1 0 50%;
+}
+
+.post:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.content-img {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+.content-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-img a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.blog-text {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 2em;
+}
+
+.post:nth-child(2n) .blog-text {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.blog-text h2 {
+    display: block;
+    width: 85%;
+    font-size: 64px;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    margin-top: 3%;
+    margin-bottom: 30px;
+}
+
+.blog-text h2 a {
+    color: white;
+    text-decoration: none;
+}
+
+.blog-text h2 a:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.blog-text p {
+    width: 90%;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.blog-text time {
+    top: 5%;
+    right: 5%;
+    color: rgba(255, 255, 255, 0.25);
+    position: absolute;
+    font-size: 62px;
+    line-height: 1;
+    text-align: center;
+}
+
+.blog-text time span {
+    display: block;
+    font-size: 36px;
+    text-transform: lowercase;
+}
+
+.post:nth-child(2n) .blog-text time {
+    right: unset;
+    left: 5%;
+}
+
+.post-5 .blog-text p {
+    width: 100%;
+}
+
+.post-1 .content-img a:hover {
+    background-color: rgba(183, 23, 87, 0.5);
+}
+
+.post-2 .content-img a:hover {
+    background-color: rgba(13, 124, 111, 0.5);
+}
+
+.post-3 .content-img a:hover {
+    background-color: rgba(177, 102, 14, 0.5);
+}
+
+.post-4 .content-img a:hover {
+    background-color: rgba(209, 39, 103, 0.5);
+}
+
+.post-5 .content-img a:hover {
+    background-color: rgba(45, 149, 187, 0.5);
+}
+
+.articles {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+}
+
+.articles article {
+    background-color: white;
+    color: black;
+    margin-bottom: 15%;
+}
+
+.articles article img {
+    width: 100%;
+    height: auto;
+}
+
+.article-text {
+    box-sizing: border-box;
+    padding: 15%;
+}
+
+.article-text h2 {
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 1.25;
+    margin-bottom: 7%;
+    opacity: 0.85;
+}
+
+.article-text p {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.75;
+    letter-spacing: 1px;
+}
+
+footer {
+    background-color: #162b4d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    opacity: 0.5;
+    margin-bottom: 0.5em;
+}
+
+@media (max-width: 1400px) {
+
+    body {
+        max-width: 950px;
+        width: unset;
+    }
+
+    main {
+        width: auto;
+        margin: 2% auto 2% auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    section {
+        width: 60%;
+    }
+
+    .post,
+    .post:nth-child(2n),
+    .post:nth-child(2n) .blog-text,
+    .blog-text {
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .content-img a {
+        display: none;
+    }
+
+    .blog-text {
+        padding: 5%;
+    }
+
+    .blog-text h2 {
+        width: unset;
+        font-size: 2em;
+        text-align: left;
+    }
+
+    .blog-text p {
+        width: unset;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    .blog-text time {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        font-size: 34px;
+        left: 0;
+        right: 0;
+    }
+
+    .blog-text time span {
+        font-size: 34px;
+    }
+
+    .articles {
+        width: 35%;
+    }
+
+    .article-text {
+        padding: 10%;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+
+    body {
+        max-width: 90%;
+    }
+
+    section {
+        max-width: 95%;
+    }
+
+    .articles {
+        max-width: 95%;
+    }
+
+    .article-text {
+        padding: 7%;
+    }
+}
