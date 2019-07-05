@@ -43,7 +43,7 @@ body {
 
 header {
     max-width: 100%;
-    height: 70px;
+    height: auto;
     background-color: #162b4d;
     font-size: 2em;
     display: flex;
@@ -276,8 +276,30 @@ footer {
         width: unset;
     }
 
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header::before{
+        height: auto;
+        content: "\002630";
+        display: block;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logo {
+        margin-bottom: 5%;
+        font-size: 1.5em;
+    }
+
     main {
-        width: auto;
+        width: 100%;
         margin: 2% auto 2% auto;
         display: flex;
         flex-wrap: wrap;
@@ -287,15 +309,18 @@ footer {
         width: 60%;
     }
 
-    .post,
-    .post:nth-child(2n),
-    .post:nth-child(2n) .blog-text,
+    .content-img,
     .blog-text {
-        width: auto;
-        height: auto;
-        flex-direction: column;
+        flex: 1 0 100%;
+    }
+
+    .post:nth-child(2n) .blog-text {
+        flex-direction: row;
         text-align: left;
-        justify-content: flex-start;
+    }
+
+    .post:nth-child(2n) .blog-text time {
+        left: 0;
     }
 
     .content-img a {
@@ -304,12 +329,6 @@ footer {
 
     .blog-text {
         padding: 5%;
-    }
-
-    .blog-text h2 {
-        width: unset;
-        font-size: 2em;
-        text-align: left;
     }
 
     .blog-text p {
@@ -326,6 +345,7 @@ footer {
         font-size: 34px;
         left: 0;
         right: 0;
+        margin-bottom: 5%;
     }
 
     .blog-text time span {
@@ -354,12 +374,31 @@ footer {
         max-width: 90%;
     }
 
+    main {
+        width: 100%;
+        margin: 2% auto 2% auto;
+        flex-direction: column;
+    }
+
     section {
-        max-width: 95%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .blog-text time {
+        margin-top: 3%;
+        margin-bottom: 5%;
     }
 
     .articles {
-        max-width: 95%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .articles article {
+        margin-bottom: 10%;
     }
 
     .article-text {
