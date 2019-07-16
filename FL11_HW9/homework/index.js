@@ -92,3 +92,12 @@ function canConvertToDate (ConvertToDate) {
 
 canConvertToDate('2016-13-18T00:00:00');
 canConvertToDate('2016-03-18T00:00:00');
+
+// Task 7
+function daysBetween(dataStart, dataEnd) {
+    let dayStart = Math.floor(Date.parse(dataStart) / (1000 * 60 * 60 * 24)),
+        dayEnd = Math.floor(Date.parse(dataEnd) / (1000 * 60 * 60 * 24));
+    return dayEnd - dayStart;
+}
+
+daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00'));
