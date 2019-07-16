@@ -83,3 +83,12 @@ function showFormattedDate(dateShowFormattedDate) {
 }
 
 console.log(showFormattedDate(new Date('2019-01-27T01:10:00')));
+
+// Task 6
+function canConvertToDate (ConvertToDate) {
+    let checkData = new Date(ConvertToDate);
+    return !isNaN(checkData.getDate());
+}
+
+canConvertToDate('2016-13-18T00:00:00');
+canConvertToDate('2016-03-18T00:00:00');
