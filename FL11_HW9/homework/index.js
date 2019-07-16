@@ -45,14 +45,29 @@ executeforEach([1, 2, 3], function(el) {
 });
 
 // Task 3
-function mapArray (arrayExecuteForEach, functionExecuteForEach){
+function mapArray (arrayMapArray, functionArrayMapArray){
     let result = [];
-    for (let i = 0; i < arrayExecuteForEach.length; i++) {
-        result[i] = functionExecuteForEach(arrayExecuteForEach[i]);
+    for (let i = 0; i < arrayMapArray.length; i++) {
+        result.push(functionArrayMapArray(arrayMapArray[i]));
     }
     return result;
 }
 
 mapArray([2, 5, 8], function(el) {
     return el + 3;
+});
+
+// Task 4
+function filterArray (arrayFilterArray, functionFilterArray){
+    let result = [];
+    for (let i = 0; i < arrayFilterArray.length; i++) {
+        if (functionFilterArray(arrayFilterArray[i])) {
+            result.push(arrayFilterArray[i]);
+        }
+    }
+    return result;
+}
+
+filterArray([2, 5, 8], function(el) {
+    return el > 3;
 });
