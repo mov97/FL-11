@@ -31,3 +31,15 @@ function findTypes() {
 
 findTypes(`number`);
 findTypes(null, 5, `hello`);
+
+
+// Task 2
+function executeforEach (arrayExecuteForEach, functionExecuteForEach){
+    for (let i = 0; i < arrayExecuteForEach.length; i++) {
+        functionExecuteForEach(arrayExecuteForEach[i]);
+    }
+}
+
+executeforEach([1, 2, 3], function(el) {
+    console.log(el)
+});
