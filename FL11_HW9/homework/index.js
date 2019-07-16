@@ -163,3 +163,14 @@ function keys(keysArray) {
 }
 
 keys({keyOne: 1, keyTwo: 2, keyThree: 3});
+
+// Task 10
+function values (valuesArray) {
+    let value =[];
+    for (let key in valuesArray) {
+        value.push(valuesArray[key]);
+    }
+    return value;
+}
+
+values({keyOne: 1, keyTwo: 2, keyThree: 3});
