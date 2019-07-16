@@ -152,3 +152,14 @@ function getAmountOfAdultPeople(dataGetAmountOfAdultPeople) {
 }
 
 getAmountOfAdultPeople(data);
+
+// Task 9
+function keys(keysArray) {
+    let keys =[];
+    for (let key in keysArray) {
+        keys.push(key);
+    }
+    return keys;
+}
+
+keys({keyOne: 1, keyTwo: 2, keyThree: 3});
