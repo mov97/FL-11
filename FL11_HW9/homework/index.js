@@ -43,3 +43,16 @@ function executeforEach (arrayExecuteForEach, functionExecuteForEach){
 executeforEach([1, 2, 3], function(el) {
     console.log(el)
 });
+
+// Task 3
+function mapArray (arrayExecuteForEach, functionExecuteForEach){
+    let result = [];
+    for (let i = 0; i < arrayExecuteForEach.length; i++) {
+        result[i] = functionExecuteForEach(arrayExecuteForEach[i]);
+    }
+    return result;
+}
+
+mapArray([2, 5, 8], function(el) {
+    return el + 3;
+});
