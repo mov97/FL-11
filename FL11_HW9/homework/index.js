@@ -71,3 +71,15 @@ function filterArray (arrayFilterArray, functionFilterArray){
 filterArray([2, 5, 8], function(el) {
     return el > 3;
 });
+
+// Task 5
+function showFormattedDate(dateShowFormattedDate) {
+    let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        day = dateShowFormattedDate.getDate(),
+        month = months[dateShowFormattedDate.getMonth()],
+        year = dateShowFormattedDate.getFullYear();
+
+    return `Date: ${month} ${day} ${year}`;
+}
+
+console.log(showFormattedDate(new Date('2019-01-27T01:10:00')));
