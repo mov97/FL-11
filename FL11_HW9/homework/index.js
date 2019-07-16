@@ -1,3 +1,15 @@
+let age18 = 18,
+    plusOne = 1,
+    countDaysInYear = 365,
+    five = 5,
+    eight = 8,
+    two = 2,
+    three = 3,
+    one = 1,
+    twentyfour = 24,
+    sixty = 60,
+    thousand = 1000;
+
 // Task 0
 function getNumbers(stringFromUser) {
     let result = [],
@@ -20,9 +32,9 @@ function findTypes() {
 
     for (i = 0; i < arguments.length; i++) {
         if (typeof arguments[i] in result) {
-            result[typeof arguments[i]] += 1;
+            result[typeof arguments[i]] += plusOne;
         } else {
-            result[typeof arguments[i]] = 1;
+            result[typeof arguments[i]] = plusOne;
         }
     }
 
@@ -30,7 +42,7 @@ function findTypes() {
 }
 
 findTypes(`number`);
-findTypes(null, 5, `hello`);
+findTypes(null, five, `hello`);
 
 
 // Task 2
@@ -40,7 +52,7 @@ function executeforEach (arrayExecuteForEach, functionExecuteForEach){
     }
 }
 
-executeforEach([1, 2, 3], function(el) {
+executeforEach([one, two, three], function(el) {
     console.log(el)
 });
 
@@ -53,8 +65,8 @@ function mapArray (arrayMapArray, functionArrayMapArray){
     return result;
 }
 
-mapArray([2, 5, 8], function(el) {
-    return el + 3;
+mapArray([two, five, eight], function(el) {
+    return el + three;
 });
 
 // Task 4
@@ -68,8 +80,8 @@ function filterArray (arrayFilterArray, functionFilterArray){
     return result;
 }
 
-filterArray([2, 5, 8], function(el) {
-    return el > 3;
+filterArray([two, five, eight], function(el) {
+    return el > three;
 });
 
 // Task 5
@@ -95,8 +107,8 @@ canConvertToDate('2016-03-18T00:00:00');
 
 // Task 7
 function daysBetween(dataStart, dataEnd) {
-    let dayStart = Math.floor(Date.parse(dataStart) / (1000 * 60 * 60 * 24)),
-        dayEnd = Math.floor(Date.parse(dataEnd) / (1000 * 60 * 60 * 24));
+    let dayStart = Math.floor(Date.parse(dataStart) / (thousand * sixty * sixty * twentyfour)),
+        dayEnd = Math.floor(Date.parse(dataEnd) / (thousand * sixty * sixty * twentyfour));
     return dayEnd - dayStart;
 }
 
@@ -143,9 +155,9 @@ function getAmountOfAdultPeople(dataGetAmountOfAdultPeople) {
     let peopleCount = 0,
         i;
     for (i = 0; i < dataGetAmountOfAdultPeople.length; i++) {
-        let ageToday = daysBetween(dataGetAmountOfAdultPeople[i][" birthday "], dateToday) / 365;
-        if (ageToday > 18) {
-            peopleCount += 1;
+        let ageToday = daysBetween(dataGetAmountOfAdultPeople[i][" birthday "], dateToday) / countDaysInYear;
+        if (ageToday > age18) {
+            peopleCount += plusOne;
         }
     }
     return peopleCount;
