@@ -157,7 +157,9 @@ getAmountOfAdultPeople(data);
 function keys(keysArray) {
     let keys =[];
     for (let key in keysArray) {
-        keys.push(key);
+        if (keysArray.hasOwnProperty(key)) {
+            keys.push(key);
+        }
     }
     return keys;
 }
@@ -168,7 +170,9 @@ keys({keyOne: 1, keyTwo: 2, keyThree: 3});
 function values (valuesArray) {
     let value =[];
     for (let key in valuesArray) {
-        value.push(valuesArray[key]);
+        if (valuesArray.hasOwnProperty(key)) {
+            value.push(valuesArray[key]);
+        }
     }
     return value;
 }
