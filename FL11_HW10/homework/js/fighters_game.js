@@ -36,11 +36,11 @@ class Fighter {
         } else {
             console.log(`${Fighter.getName()} attack missed`);
         }
-    };
+    }
 
     logCombatHistory() {
         console.log(`Name: ${this.getName()}, Wins: ${this.wins}, Loses: ${this.loses}`);
-    };
+    }
 }
 
 function battle (fighter1, fighter2) {
