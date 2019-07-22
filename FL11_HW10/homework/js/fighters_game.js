@@ -34,7 +34,7 @@ class Fighter {
             console.log( `${this.getName()} make ${this.getDamage()} damage to ` +
                 `${Fighter.getName()}.${Fighter.getName()} hp: ${Fighter.getHealth()} `);
         } else {
-            console.log(`${Fighter.getName()} attack missed`)
+            console.log(`${Fighter.getName()} attack missed`);
         }
     };
 
